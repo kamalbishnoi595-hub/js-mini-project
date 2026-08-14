@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "watch",
+			"path": "."
+		},
+		{
+			"name": "basic",
+			"path": "../basic"
+		}
+	],
+	"settings": {}
+}

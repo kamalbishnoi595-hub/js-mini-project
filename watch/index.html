@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+    }
+
+    .clock {
+      height: 450px;
+      width: 700px;
+      background-color: white;
+      box-shadow: 0px 0px 3px 10px rgb(182, 167, 167);
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(0, 0, 0);
+    }
+
+    .time {
+      height: 150px;
+      width: 150px;
+      margin: 20px;
+      background-color: rgb(37, 38, 38);
+      border-radius: 50px;
+      padding: 20px;
+      color:rgb(195, 48, 48);
+      font-size: 120px;
+    }
+
+    .circle {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background-color: rgb(112, 111, 111);
+    }
+
+    .dot {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .head {
+      font-size: 80px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock" >
+
+    <div class="time" id="hrs"></div>
+
+    <div class="dot">
+      <div class="circle" id="one"></div>
+      <div class="circle" id="two"></div>
+    </div>
+    <div class="time" id="mins"></div>
+
+    <div class="dot">
+      <div class="circle" id="three"></div>
+
+      <div class="circle" id="four"></div>
+    </div>
+    <div class="time" id="sec"></div>
+
+
+  </div>
+
+
+  <script>
+
+    
+    
+  let hrs=document.getElementById('hrs')
+  let mins=document.getElementById('mins')
+  let sec=document.getElementById('sec')
+  setInterval(()=>{
+    let date=new Date()
+    hrs.innerHTML=(date.getHours()<10?"0":"") + date.getHours()
+    mins.innerHTML=(date.getMinutes()<10?"0":"") + date.getMinutes()
+    sec.innerHTML=(date.getSeconds()<10?"0":"") + date.getSeconds()
+  })
+
+
+
+  </script>
+</body>
+
+</html>
